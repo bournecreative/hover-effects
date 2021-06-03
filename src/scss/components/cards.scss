@@ -1,0 +1,161 @@
+.card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background: url("https://picsum.photos/seed/picsum/800.jpg") 50% 50%;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    background: #ffffff;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    opacity: 0;
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    transition: 0.3s ease;
+  }
+
+  .card__text {
+    text-align: center;
+  }
+
+  .card__title {
+    font-size: 48px;
+    margin-bottom: 5px;
+  }
+
+  .card__desc {
+    margin: 0;
+  }
+}
+
+// opacity
+.card__opac {
+  &:hover {
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  .card__text {
+    z-index: 1;
+  }
+}
+
+// opacity + scale
+.card__opac-scale {
+  &::before {
+    transform: scale(0);
+    transition: transform 0.3s;
+  }
+  &:hover {
+    &::before {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+  }
+
+  .card__text {
+    z-index: 1;
+  }
+}
+
+// opacity + scale left
+.card__opac-scale--left {
+  &::before {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  &:hover {
+    &::before {
+      opacity: 0.5;
+      transform: scaleX(1);
+    }
+  }
+
+  .card__text {
+    z-index: 1;
+  }
+}
+
+// opacity + scale right
+.card__opac-scale--right {
+  &::before {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+  }
+  &:hover {
+    &::before {
+      opacity: 0.5;
+      transform: scaleX(1);
+    }
+  }
+
+  .card__text {
+    z-index: 1;
+  }
+}
+
+// opacity + scale middle
+.card__opac-scale--middle {
+  &::before {
+    transform: scaleX(0);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+  }
+  &:hover {
+    &::before {
+      opacity: 0.5;
+      transform: scaleX(1);
+    }
+  }
+
+  .card__text {
+    z-index: 1;
+  }
+}
+
+// opacity + scale bottom
+.card__opac-scale--bottom {
+  &::before {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+  }
+  &:hover {
+    &::before {
+      opacity: 0.5;
+      transform: scaleY(1);
+    }
+  }
+
+  .card__text {
+    z-index: 1;
+  }
+}
+
+// opacity + scale top
+.card__opac-scale--top {
+  &::before {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s;
+  }
+  &:hover {
+    &::before {
+      opacity: 0.5;
+      transform: scaleY(1);
+    }
+  }
+
+  .card__text {
+    z-index: 1;
+  }
+}
