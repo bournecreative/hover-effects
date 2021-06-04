@@ -159,3 +159,83 @@
     z-index: 1;
   }
 }
+
+// scale borders
+.card__opac-scale--borders {
+  &::before {
+    background: none;
+    border-bottom: 3px solid whitesmoke;
+    border-top: 3px solid whitesmoke;
+    transform: scale(0, 1);
+    transform-origin: top;
+    transition: transform 0.3s;
+  }
+
+  &::after {
+    content: "";
+    border-left: 3px solid whitesmoke;
+    border-right: 3px solid whitesmoke;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    transform: scale(1, 0);
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.5;
+      transform: scale(1, 1);
+    }
+    &::after {
+      opacity: 0.5;
+      transform: scale(1, 1);
+    }
+  }
+
+  .card__text {
+    z-index: 1;
+  }
+}
+
+// scale borders
+.card__opac-scale--border-cross {
+  &::before {
+    background: none;
+    border-bottom: 3px solid whitesmoke;
+    border-top: 3px solid whitesmoke;
+    transform: scale(0, 1);
+    transform-origin: top;
+    transition: transform 0.3s;
+  }
+
+  &::after {
+    content: "";
+    border-left: 3px solid whitesmoke;
+    border-right: 3px solid whitesmoke;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    transform: scale(1, 0);
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.5;
+      transform: scale(1.03, 1);
+    }
+    &::after {
+      opacity: 0.5;
+      transform: scale(1, 1.04);
+    }
+  }
+
+  .card__text {
+    z-index: 1;
+  }
+}
